@@ -1,0 +1,39 @@
+{
+	"name": "@lachero/safe-try",
+	"version": "1.0.0",
+	"description": "Simplifies error handling with wrappers for sync and async operations, returning a result-error tuple",
+	"main": "dist/index.js",
+	"scripts": {
+		"dev": "tsx --watch src/index.ts",
+		"build": "rm -rf dist && tsup src/index.ts --format esm --dts",
+		"build:watch": "rm -rf dist && tsup src/index.ts --watch --format esm --dts",
+		"release": "npm run build && npm publish"
+	},
+	"files": [
+		"dist"
+	],
+	"keywords": [
+		"try",
+		"async",
+		"sync",
+		"await",
+		"promise",
+		"safe"
+	],
+	"author": "LacheRo`",
+	"license": "MIT",
+	"type": "module",
+	"devDependencies": {
+		"@types/node": "^22.5.4",
+		"tsup": "^8.2.4",
+		"tsx": "^4.19.1",
+		"typescript": "^5.6.2"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lacherogwu/safe-try"
+	}
+}
