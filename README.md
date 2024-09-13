@@ -40,22 +40,14 @@ function mightFailSync() {
 }
 ```
 
-Inspired by [Go](https://go.dev/) error handling pattern
+Inspired by [Go Error Handling](https://go.dev/blog/error-handling-and-go)
 
 ```go
-func main() {
-    content, err := readFile("example.txt")
-    if err != nil {
-        if os.IsNotExist(err) {
-            fmt.Printf("File %s does not exist.\n", filename)
-        } else {
-            fmt.Printf("Failed to read file %s: %v\n", filename, err)
-        }
-        return
-    }
-
-    fmt.Printf("File content:\n%s\n", content)
+f, err := os.Open("filename.ext")
+if err != nil {
+    log.Fatal(err)
 }
+// do something with the open *File f
 ```
 
 Inspired by [ECMAScript Safe Assignment Operator Proposal](https://github.com/arthurfiorette/proposal-safe-assignment-operator)
